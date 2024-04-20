@@ -34,12 +34,8 @@ def python_text(text="is cool"):
 @app.route('/number/<n>')
 def number_text(n):
     """ replace text with variable only if number. """
-    if isinstance(n, int):
-        n = str(n)
-        return '{} is a number'.format(n)
-    else:
-        return
-
+    n = str(n)
+    return '{} is a number'.format(n)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
