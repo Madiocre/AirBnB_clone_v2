@@ -50,5 +50,16 @@ def html_num_text(n):
     return render_template('5-number.html', n=n)
 
 
+@app.route('/number_template/<int:n>')
+def html_evenodd_text(n):
+    """ replace text with variable only if number. """
+    n = str(n)
+    if (n % 2) == 0:
+        ty = "even"
+    else:
+        ty = "odd"
+    return render_template('5-number.html', n=n, ty=ty)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
