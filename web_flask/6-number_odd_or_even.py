@@ -53,7 +53,6 @@ def html_num_text(n):
 @app.route('/number_odd_or_even/<int:n>')
 def html_evenodd_text(n):
     """ replace text with variable only if number. """
-    n = str(n)
     return render_template('5-number.html', n=n)
 
 
