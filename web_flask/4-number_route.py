@@ -27,15 +27,15 @@ def c_text(text):
 @app.route('/python/')
 @app.route('/python/<text>')
 def python_text(text="is cool"):
-    """ replace text with variable. """
+    """ replace text with variable with default condition. """
     text = text.replace('_', ' ')
     return 'Python {}'.format(text)
 
 @app.route('/number/<n>')
-def python_text(n):
-    """ replace text with variable. """
+def number_text(n):
+    """ replace text with variable only if number. """
     if isinstance(n, int):
-        return '{}'.format(n)
+        return '{} is a number'.format(n)
     else:
         return
 
