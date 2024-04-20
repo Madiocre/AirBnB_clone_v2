@@ -54,11 +54,7 @@ def html_num_text(n):
 def html_evenodd_text(n):
     """ replace text with variable only if number. """
     n = str(n)
-    if (n % 2) == 0:
-        ty = "even"
-    else:
-        ty = "odd"
-    return render_template('5-number.html', n=n, ty=ty)
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == '__main__':
