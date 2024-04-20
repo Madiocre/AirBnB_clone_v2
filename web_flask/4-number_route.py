@@ -31,7 +31,7 @@ def python_text(text="is cool"):
     text = text.replace('_', ' ')
     return 'Python {}'.format(text)
 
-@app.route('/number/<n>')
+@app.route('/number/<int:n>')
 def number_text(n):
     """ replace text with variable only if number. """
     n = str(n)
