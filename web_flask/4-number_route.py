@@ -35,6 +35,7 @@ def python_text(text="is cool"):
 def number_text(n):
     """ replace text with variable only if number. """
     if isinstance(n, int):
+        n = str(n)
         return '{} is a number'.format(n)
     else:
         return
